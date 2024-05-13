@@ -1,0 +1,38 @@
+* {
+    margin: 0%;
+}
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(new.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+}
+.header {
+    width: 100vw;
+    height: 15%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba( 15, 15, 16, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+}
+.descubra {
+    color: rgb(241, 118, 139);
+    border-bottom: 10px;
+    border-radius: 10%;
+    margin-right: 20px;
+}
+.logo {
+    margin-left: 20px;
+}
+.conteudo {
+    width: 100vw;
+    position: relative;
+    margin: 15px;
+}

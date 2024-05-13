@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média do aluno</title>
+</head>
+<body>
+    <script>
+        do {
+        var nota1=parseInt(window.prompt("Primeira nota"))
+        } while(nota1>20 || nota1<0);
+        do {
+        var nota2=parseInt(window.prompt("Segunda nota"))
+        } while(nota2>20 || nota2<0);
+        do {
+        var nota3=parseInt(window.prompt("Terceira nota"))
+        } while(nota3>20 || nota3<0);
+
+        var result=(nota1+nota2+nota3)/3;
+        if (result>=9.5)
+            document.write("Aprovado")
+        else
+            document.write("Reprovado")
+    </script>
+</body>
+</html> 

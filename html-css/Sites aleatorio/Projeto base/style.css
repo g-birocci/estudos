@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+}
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    
+}
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(247, 51, 149);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main {
+    width: 80%;
+    height: 100vh;
+    background-color: greenyellow;
+    position: relative;
+}
+.cont {
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.left {
+    width: 50%;
+    height: 100vh;
+    background-color: green;
+}
+.right {
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+}

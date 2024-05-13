@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mostra() {
+            var horasInput = document.getElementsByName("horas")[0];
+            var horaslbl = document.getElementsByName("lblhoras")[0];
+                if (document.f1.bolsa.value=="sim"){
+                    horaslbl.style.display = "inline";
+                    horasInput.style.display = "inline";
+                }
+                else {
+                    horasInput.style.display = "none";
+                    horaslbl.style.display ="none";
+                }
+        }
+        function calcular(){
+            dias=parseFloat(document.f1.dias.value);
+            horas=parseFloat(document.f1.horas.value);
+            transp=parseFloat(document.f1.transp.value);
+            outros=parseFloat(document.f1.outros.value);
+            vr=dias*6 + horas*1.95 + transp + outros;
+            if (vr<100)
+                document.getElementById("res").innerHTML="Este mês irá receber" + vr + "<br>Sua bolsa está abaixo da média";
+            if (vr>=100 && vr<200)
+                document.getElementById("res").innerHTML="Este mês irá receber" + vr + "<br>Sua bolsa está na média";
+            if (vr>=200)
+                document.getElementById("res").innerHTML="Este mês irá receber" + vr + "<br>Sua bolsa está acima da média";
+        }
+    </script>
+</head>
+<body>
+    <h1>Cálculo dos Apoios Sociais</h1>
+    <form name="f1">
+        <label for dias >Dias de alimentação: </label>
+            <input type="number" name="dias" max="25" min="1"><br>
+        <label for bolsa>Recebe Bolsa:</label>
+            <select name="bolsa" onchange="mostra()">
+                <option value="sim">sim</option>
+                <option value="nao">Não</option><br>
+            </select><br>
+        <label for="horas" name="lblhoras">Horas de aulas comcluidas:</label>
+            <input type="number" name="horas" max="100" min="1"><br>
+        <label for="transp">Vale Transporte</label>
+            <input type="number" name="transp"><br>
+        <label for="outros">Outros auxilios</label>
+            <input type="number" name="outros">
+            <input type="button" value="Calcular os Valores" onclick="calcular()">
+    <h2 id="res"></h2>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+Para utilizar o EmailJS em seu projeto e obter os detalhes como Service ID, Template ID e Public Key, você precisa seguir estes passos:
+
+Criar uma Conta no EmailJS: Primeiro, você precisa criar uma conta no EmailJS. Visite o site EmailJS e clique em "Sign Up" para criar uma nova conta.
+Adicionar um Serviço: Após fazer login na sua conta do EmailJS, você precisará adicionar um serviço. Um serviço no EmailJS é uma coleção de modelos de email e configurações associadas. Para fazer isso, vá para a seção "Services" no painel do EmailJS e clique em "Add New Service".
+Configurar o Serviço: Aqui, você precisa fornecer um nome para o serviço e configurar as opções necessárias, como o endereço de email do remetente. Após configurar o serviço, o EmailJS irá gerar um Service ID para você.
+Adicionar um Modelo de Email: Depois de criar o serviço, você precisa adicionar um modelo de email. Um modelo de email define a estrutura e o conteúdo de um email específico que você deseja enviar. No painel do EmailJS, vá para a seção "Email Templates" e clique em "Add New Template".
+Configurar o Modelo de Email: Aqui, você precisa fornecer um nome para o modelo, o assunto do email e o corpo do email. Você também pode adicionar variáveis ​​que serão preenchidas dinamicamente quando o email for enviado. Após configurar o modelo, o EmailJS irá gerar um Template ID para você. Trocar os parametros que estão lá pelos que estão no hmtl:username, email, message.
+Obter a Public Key: A Public Key é necessária para autenticar as solicitações enviadas para a API do EmailJS. Você pode encontrar sua Public Key na seção "API Keys" do painel do EmailJS. OU no perfil, também deverá estar lá.
+Depois de seguir esses passos, você terá o Service ID, o Template ID e a Public Key necessários para enviar emails usando o EmailJS. Você pode então usar essas informações em seu código JavaScript para configurar e enviar emails. Certifique-se de manter suas chaves de API seguras e não compartilhá-las publicamente.

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Birocci</title>
+</head>
+<body>
+    <script>
+        document.white("nome browaer = ",navigator.appName);
+        document.white("<br/>nome versão = ",navigator.appVersion);
+
+        document.white("<br/>Suporte e cookies = ",navigator.cookieEnabled);
+        document.white("<br/>Java Suportado = ".navigator.javaEnabled());
+        
+        document.white("<br/>Nome s.o =",navigator.platform);
+
+        document.white("<br/>hash =",location.hash);
+        document.white("<br/>host = ",location.host);
+        document.white("<br/>hostname =",location.hostname);
+        document.white("<br/>href =",location.href);
+        document.white("<br/>pathname = ",location.pathname);
+        document.white("<br/>port =",location.port);
+        document.white("<br/>protocol =",location.protocol);
+
+        function getIP(json) {
+            document.white("<br/>O ip: " + json.ip);
+        }
+
+    </script>
+    <script src="https://api.ipify.org?format=jsonp4callback=getIP"></script>
+</body>
+</html>

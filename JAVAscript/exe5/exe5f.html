@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            height: 50%;
+            background-color: blue;  
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function blue(){
+            document.getElementById("imagem").setAttribute("src","IEFP3.jpg");
+        }
+        function red(){
+            document.getElementById("imagem").setAttribute("src","IEFP2.jpg");
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <h1>Trabalhando com imagens</h1>
+        <img src="IEFP.jpg" id="imagem">
+            <p><input type="button" onclick="blue()" value="blue"></p>
+            <input type="button" onclick="red()" value="red">    
+        </div>
+</body>
+</html>

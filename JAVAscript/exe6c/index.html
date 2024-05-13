@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcula() {
+        var peso = parseFloat(document.f1.peso.value);
+        console.log(peso);
+        var altura = parseFloat(document.f1.altura.value);
+        console.log(altura);
+
+        var imc = peso / (altura*altura);
+        if (document.f1.genero.value=="fem")
+            fem(imc);
+        if(document.f1.genero.value=="mas")
+            mas(imc);
+        }
+        function fem(imc) {
+            if (imc<19)
+            document.getElementById("res").innerHTML="abaixo do peso " + imc;
+            if (imc>=19 && imc<24)
+            document.getElementById("res").innerHTML="Peso Normal" + imc;
+            if (imc>=24 && imc < 30)
+            document.getElementById("res").innerHTML="Acima do peso" + imc;
+            if (imc>=30)
+            document.getElementById("res").innerHTML="Gordo" + imc;
+        }
+        function mas(imc) {
+            if (imc<20)
+            document.getElementById("res").innerHTML="abaixo do peso " + imc;
+            if (imc>=20 && imc <25)
+            document.getElementById("res").innerHTML="Peso Normal" + imc;
+            if (imc>=25 && 30)
+            document.getElementById("res").innerHTML="Acima do peso" + imc;
+            if (imc>=30)
+            document.getElementById("res").innerHTML="Gordo" + imc;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculo do IMC</h1>
+    <form name="f1">
+        <label for peso >Peso: </label>
+        <input id="peso" placeholder="99.99" type="text" name="peso"><br>
+        <label >Altura:</label>
+        <input id="altura" placeholder="1.99" type="text" name="altura"><br>
+        <label for genero>genero:</label><br>
+        <select name="genero"> 
+            <option value="fem">Feminino</option>
+            <option value="mas">Masculino</option>
+        </select><br><br>
+        <input type="button" value="Calcula IMC" onclick="calcula()">
+    </form>
+    <h2 id="res"></h2>
+</body>
+</html>

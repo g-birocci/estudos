@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function soma(){
+            var nu = parseInt(window.prompt("O primeiro numero?"));
+            var num = parseInt(window.prompt("O segundo numero?"));
+            var res=nu+num;
+            document.getElementById('resultado').innerHTML = ('Resultado é ' + res);
+        }
+        function maior(){
+            var num1 = parseInt(window.prompt("O primeiro numero"));
+            var num2 = parseInt(window.prompt("O segundo numero"));
+            if (num1>num2)
+            document.getElementById('resultado').innerHTML = 'O maior entre' + num1 + " e " + num2 + " " + num1;
+            if (num2>num1)
+            document.getElementById('resultado').innerHTML = 'O  maior entre' + num1 + " e " + num2 + " é " + num2;
+            if (num2==num1)
+            document.getElementById('resultado').innerHTML = 'O numeros são iguais' + num2;
+        }
+        function menor(){
+            var num1 = parseInt(window.prompt("O primeiro numero"));
+            var num2 = parseInt(window.prompt("O segundo numero"));
+            if (num1<num2)
+            document.getElementById('resultado').innerHTML = 'O menor entre' + num1 + " e " + num2 + " " + num1;
+            if (num2<num1)
+            document.getElementById('resultado').innerHTML = 'O  menor entre' + num1 + " e " + num2 + " é " + num2;
+            if (num2==num1)
+            document.getElementById('resultado').innerHTML = 'O numeros são iguais' + num2;
+        }
+    </script>
+</head>
+<body>
+    <h1>Variaveis e funções</h1>
+    <p></p><input type="button" value="Soma" onclick="soma()">Soma com os valoes fornecidos pelo utilizado</p>
+    <p></p><input type="button" value="Maior" onclick="maior()">Calcula o maior numero entre os dois.</p>
+    <p><input type="button" value="Menor" onclick="menor()">Calcula o menos numero entre os dois</p>
+    <h2 id="resultado"></h2>
+</body>
+</html>

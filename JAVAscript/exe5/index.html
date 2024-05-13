@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JS" type="text/javascript">
+        function funcao(){
+            document.getElementById('demo').innerHTML = 'Javascript é facil';
+            document.getElementById('demo').setAttribute("style","color:green; font-size:25px");
+        }
+        function funcao2(){
+            document.getElementById('demo').innerHTML = 'Vai corinthians!!!';
+            document.getElementById('demo').setAttribute("style","color:blue");
+        }      
+        function funcao3(corselecionada){
+            document.getElementById('corpo').style.background=corselecionada;
+        }
+    </script>
+</head>
+<body id="corpo">
+    <h1>Javascript é facil!!!</h1>
+        <select name="cor" onchange="funcao3(this.value)">
+            <option value="yellow">Amarelo</option>
+            <option value="white">Branco</option>
+            <option value="blue">Azul</option>
+            <option value="green">verde</option>
+
+    <p id="demo">O javascript consegue alterar o conteudo HTML</p>
+    <p><input type="button" onclick="funcao()" value="verde"></p>
+    <p><input type="button" onclick="funcao2()" value="azul"></p>
+
+
+</body>
+</html>

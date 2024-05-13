@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+        function soma(){
+            var resultado = parseFloat(document.f1.num1.value) + parseFloat(document.f1.num2.value);
+            document.getElementById("resultado").innerHTML="O resultado é " + resultado;
+        }
+        function subt(){
+            var resultado = parseFloat(document.f1.num1.value) - parseFloat(document.f1.num2.value);
+            document.getElementById("resultado").innerHTML="O resultado é " + resultado;
+        }
+        function divi(){
+            var resultado = parseFloat(document.f1.num1.value) / parseFloat(document.f1.num2.value);
+            document.getElementById("resultado").innerHTML="O resultado é " + resultado;
+        }
+        function multi(){
+            var resultado = parseFloat(document.f1.num1.value) * parseFloat(document.f1.num2.value);
+            document.getElementById("resultado").innerHTML="O resultado é " + resultado;
+        }
+        function ope(){
+            if (document.f1.op.value=="soma")
+                soma();
+            if (document.f1.op.value=="sub")
+                subt();
+            if (document.f1.op.value=="div")
+                divi();
+            if (document.f1.op.value=="mult")
+                multi();
+        }
+        function limpa(){
+            document.f1.num1.value="";
+            document.f1.num2.value="";
+            document.getElementById("resultado").innerHTML="";
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form name="f1">
+
+        Numero 1: <input type="text" name="num1" size="10"><br><br>
+        Numero 2: <input type="text" name="num2" size="10"><br><br>
+        <br>Operacao <br>
+        <input type="radio" name="op" value="soma">Soma<br>
+        <input type="radio" name="op" value="sub">Subtração<br>
+        <input type="radio" name="op" value="div">Divisão<br>
+        <input type="radio" name="op" value="mult">Multiplicação<br>
+        <input type="button" onclick="ope()" value="Calcular">
+        <input type="button" onclick="limpa()" value="Limpar">
+        <h2 id="resultado"></h2>
+    </form>
+
+</body>
+</html>

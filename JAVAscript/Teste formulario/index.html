@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir o formulário de enviar normalmente
+            
+            var formData = new FormData(this); // Obter os dados do formulário
+            var data = { // Preparar os dados para enviar por email
+                service_id: 'substituir', // ID do serviço de email
+                template_id: 'substituir', // ID do modelo de email
+                user_id: 'substituir', // ID do usuário
+                template_params: { // Parâmetros do modelo de email
+                    'username': formData.get('name'), // Nome do remetente
+                    'email': formData.get('email'), // Email do remetente
+                    'message': formData.get('message') // Mensagem do remetente
+                }
+            };
+            
+            fetch('https://api.emailjs.com/api/v1.0/email/send', { // Enviar os dados para a API do EmailJS
+                method: 'POST', // Método da requisição
+                headers: {
+                    'Content-Type': 'application/json' // Tipo de conteúdo da requisição
+                },
+                body: JSON.stringify(data) // Converter os dados para JSON
+            })
+            .then(function(response) { // Lidar com a resposta da requisição
+                if (response.ok) { // Se a resposta for bem-sucedida
+                    alert('Your mail is sent!'); // Alerta de sucesso
+                } else {
+                    alert('Oops... ' + response.statusText); // Alerta de erro com a mensagem de erro da resposta
+                }
+            })
+            .catch(function(error) { // Capturar erros de requisição
+                alert('Oops... ' + error); // Alerta de erro com a mensagem de erro
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Contact Us</h2> <!-- Título da seção de contato -->
+    <form id="contactForm" action="#" method="POST"> <!-- Formulário de contato -->
+        <label for="name">Name:</label><br> <!-- Rótulo para o campo de nome -->
+        <input type="text" id="name" name="name" required><br><br> <!-- Campo de entrada para o nome -->
+
+        <label for="email">Email:</label><br> <!-- Rótulo para o campo de email -->
+        <input type="email" id="email" name="email" required><br><br> <!-- Campo de entrada para o email -->
+
+        <label for="telefone">Telefone</label><br>
+        <input type="number" id="telefone" name="telefone" required><br><br>
+
+        <label for="distrito">Distrito:</label><br>
+        <input type="text" id="distrito" name="distrito" required><br><br>
+
+        <label for="message">Message:</label><br> <!-- Rótulo para o campo de mensagem -->
+        <textarea id="message" name="message" rows="4" required></textarea><br><br> <!-- Campo de entrada para a mensagem -->
+
+        <input type="submit" value="Submit"> <!-- Botão de envio do formulário -->
+    </form>
+</body>
+</html>
