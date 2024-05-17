@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html, body {
+    min-height: 100vh;
+    background-color: rgba(165, 105, 221, 0.836);
+}
