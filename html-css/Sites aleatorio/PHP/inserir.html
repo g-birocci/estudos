@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        form {
+            margin: 10px;
+        }
+        label, input {
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="inserir.php">
+</head>
+<body>
+    <h1>Inserir Dados</h1>
+    <form action="inserir.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" size="80" maxlength="100" required> <br> 
+
+        <label for="morada">Morada:</label>
+        <input type="text" name="morada" size="80" maxlength="100" required> <br>
+        
+        <label for="Zona">Zona:</label>
+        <input type="text" name="Zona" size="30" maxlength="30" required> <br> 
+
+        <label for="nif">NIF:</label>
+        <input type="text" name="nif" size="9" maxlength="9" required> <br> 
+
+        <label for="vol_fatur">Vol. Faturação:</label>
+        <input type="text" name="vol_fatur" size="10" maxlength="10"> <br>
+
+        <input type="submit" value="Inserir">
+        <input type="reset" value="Cancelar">
+     
+    </form>
+    
+</body>
+</html>
