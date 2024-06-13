@@ -5,7 +5,7 @@
         <title>Gestão de Clientes</title>
     </head>
     <body>
-    <h1>Listagem de clientes</h1>
+    <h1>Eliminação de clientes</h1>
     <br/>
     <?php
         // 1º ip do servidor; 2º nome do utilizador, 3º senha, 4º nome da bd
@@ -14,15 +14,12 @@
         if ($ligacao->connect_error){
             die(mysqli_error($ligacao));
         }
-        $sql ="INSERT INTO t_cliente (nome, morada, zona, nif, vol_fatur) 
-        values ('$_POST[nome]','$_POST[morada]','$_POST[Zona]','$_POST[nif]', $_POST[vol_fatur])";
-
+        $sql="DELETE FROM t_cliente WHERE id=". $_POST['cliente'];
         if (mysqli_query($ligacao, $sql))
-            echo " <h3>Cliente inserido com sucesso</h3>";
-        mysqli_close($ligacao); echo "<br>"
-    ?>  <br/> 
-        <h4>Aguarde ser redirecionado</h4>
-        <a href="index.html" target="_self">Voltar ao menu</a>
-    </body>
-        
+            echo "<h3>Cliente eliminado com sucesso!";
+        mysqli_close ($ligacao); 
+        echo"<br/>";
+    ?>
+    <a href="index.html">Voltar</a>
+    </body>    
 </html>
