@@ -1,0 +1,56 @@
+/* Reset de estilos para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    color: #333; /* Texto cinza escuro */
+    text-align: center; /* Centraliza o conteúdo */
+    background-color: rgb(117, 63, 117);
+}
+
+h1 {
+    margin: 20px 0; /* Espaçamento acima e abaixo do título */
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Espaçamento superior */
+    width: 200px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.celula {
+    margin: 0 10px; /* Espaçamento horizontal entre as células */
+}
+
+.celula a {
+    display: block;
+    text-decoration: none;
+    color: #333; /* Texto cinza escuro */
+    background-color: #ffffff; /* Fundo branco */
+    padding: 10px;
+    border: 1px solid #333; /* Borda sólida cinza escuro */
+    border-radius: 5px; /* Borda arredondada */
+    margin-bottom: 5px; /* Espaçamento inferior entre os links */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave de cores */
+}
+
+.celula a:hover {
+    background-color: #333; /* Fundo escuro ao passar o mouse */
+    color: #ffffff; /* Texto branco ao passar o mouse */
+    border-color: #333; /* Borda escurecida ao passar o mouse */
+}
