@@ -1,11 +1,6 @@
 * {
     margin: 0;
-}
-
-
-main {
-    font-family: Arial, Helvetica, sans-serif;
-    
+    scroll-behavior: smooth !important;
 }
 
 header { 
@@ -22,8 +17,14 @@ header {
     z-index: 10;
     top:0;
 }
+
+.home {
+    margin-left: 120px;
+}
+
 nav > ul {
     padding: 10px;
+    margin-right: 120px;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -31,6 +32,7 @@ nav > ul {
     align-items: center;
     color: white;
     list-style:none;
+
 }
 .navli > a {
     padding: 10px;
@@ -44,6 +46,7 @@ nav > ul {
 }
 
 main {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(255, 227, 227);
     min-width: 300px;
     max-width: 1000px;
