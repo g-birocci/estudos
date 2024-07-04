@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+}
+
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+header { 
+    background-color: #0E0B26;
+    height: 20px;
+    padding: 20px;
+    font-size: 20px;
+    display: block;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.856);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    z-index: 10;
+    top:0;
+}
+nav > ul {
+    background-color: red;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.navli {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+#conteudo {
+    padding: 20px;
+    margin: 0px,40px;
+    background-color: rgb(168, 109, 109);
+}
