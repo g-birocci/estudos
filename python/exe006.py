@@ -3,8 +3,11 @@ num2 = int(input("Digite o segundo numero: "))
 
 soma = num1 + num2
 subtracao = num1 - num2
-divisao = num1 / num2
-multi = num1 * num2 
+try:
+    divisao = num1 / num2
+except ZeroDivisionError:
+    divisao = "Erro: Divisão por zero!"
+multi = num1 * num2
 
 print("A soma dos numeros é " + str(soma))
 print("A subtração dos numeros é " + str(subtracao))
