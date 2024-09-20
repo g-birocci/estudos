@@ -1,4 +1,4 @@
-print("Digite os ingredientes na lista !!!")
+print("Digite os itens para a lista !!!")
 lista = []
 is_valid = False
 while is_valid == False:
@@ -6,11 +6,11 @@ while is_valid == False:
             print("Só pode ter 10 itens na lista!")
             is_valid = True
             break
-    itens = input("Digite um item para a lista: ")
+    itens = input("Digite um item para a lista (ou digite 'sair' para finalizar): \n")
     if itens.lower() == "sair":
         break
     lista.append(itens)
-    continuar = input("Deseja continuar ? ou Remover digite [Remover]")
+    continuar = input("Deseja continuar? Digite 'sim' para continuar ou 'remover' para remover um item: \n")
     if continuar.lower() == "sim":
         continue    
     elif continuar.lower() == "remover":
@@ -25,5 +25,5 @@ while is_valid == False:
     else:
         print("Input errado, programa encerrado.")
         break
-print(lista)
-print(len(lista))
+for c in lista:
+    print(c)

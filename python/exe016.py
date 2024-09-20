@@ -1,18 +1,18 @@
 print("Insira 7 numeros entre PAR e IMPAR.  ")
-numeros = []
-par = []
-impar = []
+n = []
+n_par = []
+n_impar = []
 for i in range(7):
     valores = int(input("Quais numeros?  "))
-    numeros.append(valores)   
+    n.append(valores)   
     if valores % 2 == 0:
-        par.append(valores)      
+        n_par.append(valores)      
     else:
-        impar.append(valores)       
-if len(par) > len(impar):
+        n_impar.append(valores)       
+if len(n_par) > len(n_impar):
     print("mais Par!")
 else:
     print("Mais Impar!")   
-print(numeros)
-print(par)
-print(impar)
+print(n)
+print(n_par)
+print(n_impar)
