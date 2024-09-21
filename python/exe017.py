@@ -17,7 +17,7 @@ while is_valid == False:
         if lista:
             item_to_remove = input("Digite o item que deseja remover: ")
             if item_to_remove in lista:
-                lista.remove(item_to_remove)
+                lista.remove(item_to_remove) 
             else:
                 print("O item não está na lista.")
         else:
