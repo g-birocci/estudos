@@ -34,9 +34,10 @@ while True:
                 "media": media_aluno
             }
         }
-        print(f"Aluno {nome} cadastrado com sucesso!")
+        print(f"Aluno {} cadastrado com sucesso!".format(nome))
    
     #elif opsion == 2:
+        input('Digite o nome do aluno: ')
 
     #elif opsion == 3:
     #elif opsion == 4:
