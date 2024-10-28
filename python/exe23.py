@@ -1,38 +1,48 @@
-liista = []
-contacto={}
-sair = True
-while sair == True:
-   
-    print("Bem Vindo")
-    nome = input("Digite o seu nome: ")
-    telefone = int(input("Digite o telefone: "))
-    email = input("Digite o seu email: ")
-    n_tags = int(input("Quantas tags? "))
-    tags = []
-    for n in range(0,n_tags):
-        tag = input("Insira a tag: ")
-        tags.append(tag)
-    set_tags = set(tags)
+numeros = []
 
-    contacto.update({"nome": nome, "telefone": telefone, "email": email, "tags": set_tags})
-    liista.append(contacto)
+while True:
+    print("\nMenu:")
+    print("1. Adicionar um número")
+    print("2. Remover um número")
+    print("3. Listar números")
+    print("4. Calcular a soma dos números")
+    print("5. Sair")
 
-    find = input("Deseja Pesquisar um contato ? [S/N]").lower()
-    if find == "s":
-        op = input("Deseja pesquisar por [nome] ou [tag] ?").lower()
-        op == "nome"
-        opname = input("Digite o nome: ")
-        for procurado in liista: 
-            if contacto["nome"] == opname:
-                print(contacto)
-            else:
-                print("Pessoa não encontrada")
-    
-    else:
-        sair = input("Deseja Continuar [S/N] ")
-        if sair == "N":
-            sair = False
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        numero = input("Digite um número para adicionar: ")
+        if numero.replace('.', '', 1).isdigit(): #video explicando isso está no instagram (TI)
+            numeros.append(float(numero))
+            print(f"Número {numero} adicionado à lista.")
         else:
-            sair = True
-print(liista)
-    
+            print("Entrada inválida! Digite um número válido.")
+
+    elif opcao == "2":
+        numero = input("Digite um número para remover: ")
+        if numero.replace('.', '', 1).isdigit():
+            numero = float(numero)
+            if numero in numeros:
+                numeros.remove(numero)
+                print(f"Número {numero} removido da lista.")
+            else:
+                print("O número não está na lista.")
+        else:
+            print("Entrada inválida! Digite um número válido.")
+
+    elif opcao == "3":
+        if numeros:
+            print("Números na lista:", numeros)
+        else:
+            print("A lista está vazia.")
+
+    elif opcao == "4":
+        soma = sum(numeros)
+        print("A soma dos números é:", soma)
+
+    elif opcao == "5":
+        print("Saindo do programa. Até logo!")
+        break
+
+    else:
+        print("Opção inválida! Escolha uma opção válida do menu.")
