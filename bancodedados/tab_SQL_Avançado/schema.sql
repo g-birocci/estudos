@@ -1,14 +1,22 @@
--- Tabela Modelo_Aparelho
-CREATE TABLE Modelo_Aparelho (
-    modelo_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome_modelo TEXT NOT NULL,
-    marca TEXT NOT NULL
+-- Tabela Modelo_Apare
+
+CREATE TABLE IF NOT "Modelo_Aparelho" (
+    "modelo_id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "nome_modelo" TEXT NOT NULL,
+    "marca" TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "cliente" (
+    "id" INTEGER,
+    "nome_aprelido" TEXT NOT NULL
 );
 
 -- Tabela Produto
+
+DROP TABLE Produto;
 CREATE TABLE Produto (
     produto_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome TEXT NOT NULL,
+    nome  TEXT NOT NULL,
     tipo_produto TEXT NOT NULL,
     preco REAL NOT NULL,
     estoque INTEGER NOT NULL
@@ -23,6 +31,7 @@ CREATE TABLE Especificacao_Produto (
 );
 
 -- Tabela Produto_Modelo (associação entre Produto e Modelo_Aparelho)
+DROP TABLE Produto_Modelo;
 CREATE TABLE Produto_Modelo (
     produto_modelo_id INTEGER PRIMARY KEY AUTOINCREMENT,
     produto_id INTEGER NOT NULL,
@@ -33,6 +42,7 @@ CREATE TABLE Produto_Modelo (
 );
 
 -- Tabela Cliente
+DROP TABLE Cliente;
 CREATE TABLE Cliente (
     cliente_id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL,
@@ -41,6 +51,7 @@ CREATE TABLE Cliente (
 );
 
 -- Tabela Venda
+DROP TABLE Venda;
 CREATE TABLE Venda (
     venda_id INTEGER PRIMARY KEY AUTOINCREMENT,
     data_venda DATE NOT NULL,
@@ -49,6 +60,7 @@ CREATE TABLE Venda (
 );
 
 -- Tabela Item_Venda (associação entre Venda e Produto)
+DROP TABLE Item_Venda;
 CREATE TABLE Item_Venda (
     item_venda_id INTEGER PRIMARY KEY AUTOINCREMENT,
     venda_id INTEGER NOT NULL,
@@ -58,3 +70,9 @@ CREATE TABLE Item_Venda (
     FOREIGN KEY (venda_id) REFERENCES Venda(venda_id),
     FOREIGN KEY (produto_id) REFERENCES Produto(produto_id)
 );
+
+
+
+--CREATE INDEX IF NOT EXISTS iphone
+--on Modelo_aparelho (nome_modelo)
+
