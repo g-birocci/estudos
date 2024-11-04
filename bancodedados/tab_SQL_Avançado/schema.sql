@@ -1,72 +1,68 @@
--- Tabela Modelo_Apare
-
-CREATE TABLE IF NOT "Modelo_Aparelho" (
-    "modelo_id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "nome_modelo" TEXT NOT NULL,
-    "marca" TEXT NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS "cliente" (
-    "id" INTEGER,
-    "nome_aprelido" TEXT NOT NULL
-);
 
 -- Tabela Produto
 
-DROP TABLE Produto;
+-- Remover a tabela Produto se ela já existir
+ -- Criar a tabela Produto com restrições de validação
 CREATE TABLE Produto (
-    produto_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome  TEXT NOT NULL,
+    produto_id INTEGER,
+    nome TEXT NOT NULL,
     tipo_produto TEXT NOT NULL,
-    preco REAL NOT NULL,
-    estoque INTEGER NOT NULL
+    preco REAL NOT NULL CHECK (preco >= 0), -- garante que o preço seja positivo
+    estoque INTEGER NOT NULL CHECK (estoque >= 0), -- garante que o estoque não seja negativo
+    PRIMARY KEY(produto_id)
 );
+
 
 -- Tabela Especificacao_Produto
 CREATE TABLE Especificacao_Produto (
-    produto_id INTEGER PRIMARY KEY,
+    produto_id INTEGER,
     material TEXT,
     potencia TEXT,
     FOREIGN KEY (produto_id) REFERENCES Produto(produto_id)
+    PRIMARY KEY(produto_id)
 );
 
 -- Tabela Produto_Modelo (associação entre Produto e Modelo_Aparelho)
-DROP TABLE Produto_Modelo;
+
 CREATE TABLE Produto_Modelo (
-    produto_modelo_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    produto_modelo_id INTEGER,
     produto_id INTEGER NOT NULL,
     modelo_id INTEGER NOT NULL,
     compatibilidade TEXT,
+    PRIMARY KEY (produto_MODELO_id),
     FOREIGN KEY (produto_id) REFERENCES Produto(produto_id),
     FOREIGN KEY (modelo_id) REFERENCES Modelo_Aparelho(modelo_id)
 );
 
 -- Tabela Cliente
-DROP TABLE Cliente;
+
 CREATE TABLE Cliente (
-    cliente_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    cliente_id INTEGER,
     nome TEXT NOT NULL,
     email TEXT UNIQUE,
-    telefone TEXT
+    telefone TEXT,
+    PRIMARY KEY(cliente_id)
 );
 
 -- Tabela Venda
-DROP TABLE Venda;
+
 CREATE TABLE Venda (
-    venda_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    venda_id INTEGER,
     data_venda DATE NOT NULL,
     cliente_id INTEGER NOT NULL,
+    PRIMARY KEY(venda_id)
     FOREIGN KEY (cliente_id) REFERENCES Cliente(cliente_id)
 );
 
 -- Tabela Item_Venda (associação entre Venda e Produto)
-DROP TABLE Item_Venda;
+
 CREATE TABLE Item_Venda (
-    item_venda_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    item_venda_id INTEGER,
     venda_id INTEGER NOT NULL,
     produto_id INTEGER NOT NULL,
     quantidade INTEGER NOT NULL,
     preco_unitario REAL NOT NULL,
+    PRIMARY KEY(item_venda_id)
     FOREIGN KEY (venda_id) REFERENCES Venda(venda_id),
     FOREIGN KEY (produto_id) REFERENCES Produto(produto_id)
 );

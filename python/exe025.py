@@ -1,17 +1,11 @@
-#num_word = {}
+def contar(word):  
+    vogais = ["a","e","i","o","u"]
+    contador = 0
 
-def contar(con):
-    word =input("Digite uma palavra: ").lower()
-    contador = word.count("a""b")
+    for letra in word:
+        if letra in vogais:
+            contador = contador + 1
     return contador
 
-
-print(contar("contadot"))
-
-
-#def saudacao(nome):
-    #mensagem = f"Olá, {nome}!"
-   # return mensagem
-
-# Chamando a função
-#print(saudacao("Ana"))
+word =input("Digite uma palavra: ").lower()
+print(contar(word))
