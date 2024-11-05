@@ -65,13 +65,23 @@ CREATE TABLE Item_Venda (
     FOREIGN KEY (produto_id) REFERENCES Produto(produto_id)
 );
 
--- Index 
-CREATE INDEX idx_para_iphone on Produto_Modelo (compatiblidade);
+-- Index para filtrar apenas para produtos para iphone
+CREATE INDEX idx_produto_para_iphone ON Produto_Modelo (modelo_id);
 
-CREATE INDEX idx_produto_tipo ON Produto (tipo_produto);
+SELECT Produto.nome, Produto.tipo_produto, Produto.preco, Produto.estoque
+FROM Produto
+JOIN Produto_Modelo ON Produto.produto_id = Produto_Modelo.produto_id
+JOIN Modelo_Aparelho ON Produto_Modelo.modelo_id = Modelo_Aparelho.modelo_id
+WHERE Modelo_Aparelho.nome = 'iPhone';
 
-SELECT P.nome, PM.compatibilidade
-FROM Produto P
-JOIN Produto_Modelo PM ON P.produto_id = PM.produto_id
-WHERE PM.compatibilidade LIKE '%iPhone%';
+
+-- Index para filtrar apenas para produtos para samsung
+CREATE INDEX idx_produto_para_sansung ON Produto_Modelo (modelo_id);
+
+SELECT Produto.nome, Produto.tipo_produto, Produto.preco, Produto.estoque
+FROM Produto
+JOIN Produto_Modelo ON Produto.produto_id = Produto_Modelo.produto_id
+JOIN Modelo_Aparelho ON Produto_Modelo.modelo_id = Modelo_Aparelho.modelo_id
+WHERE Modelo_Aparelho.nome = 'sansung';
+
 
