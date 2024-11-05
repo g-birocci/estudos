@@ -1,8 +1,8 @@
 
 -- Tabela Produto
-
 -- Remover a tabela Produto se ela já existir
- -- Criar a tabela Produto com restrições de validação
+-- Criar a tabela Produto com restrições de validação
+
 CREATE TABLE Produto (
     produto_id INTEGER,
     nome TEXT NOT NULL,
@@ -11,7 +11,6 @@ CREATE TABLE Produto (
     estoque INTEGER NOT NULL CHECK (estoque >= 0), -- garante que o estoque não seja negativo
     PRIMARY KEY(produto_id)
 );
-
 
 -- Tabela Especificacao_Produto
 CREATE TABLE Especificacao_Produto (
@@ -37,11 +36,10 @@ CREATE TABLE Produto_Modelo (
 -- Tabela Cliente
 
 CREATE TABLE Cliente (
-    cliente_id INTEGER,
+    cliente_id INTEGER PRIMARY KEY,
     nome TEXT NOT NULL,
     email TEXT UNIQUE,
-    telefone TEXT,
-    PRIMARY KEY(cliente_id)
+    telefone TEXT CHECK(length(telefone) BETWEEN 10 AND 15)
 );
 
 -- Tabela Venda
@@ -67,8 +65,4 @@ CREATE TABLE Item_Venda (
     FOREIGN KEY (produto_id) REFERENCES Produto(produto_id)
 );
 
-
-
---CREATE INDEX IF NOT EXISTS iphone
---on Modelo_aparelho (nome_modelo)
 

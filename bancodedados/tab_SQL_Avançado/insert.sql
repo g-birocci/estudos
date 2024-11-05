@@ -1,45 +1,49 @@
 -- add os cliente na tabela
 
-INSERT INTO Cliente (nome, email, telefone) VALUES ('Maria Silva', 'maria@example.com', '1234-5678');
-INSERT INTO Cliente (nome, email, telefone) VALUES ('João Souza', 'joao@example.com', '9876-5432');
-INSERT INTO Cliente (nome, email, telefone) VALUES ('Ana Oliveira', 'ana@example.com', '5555-6666');
+INSERT INTO Cliente (nome, email, telefone) VALUES 
+('Ana Souza', 'ana.souza@email.com', '11987654321'),
+('Carlos Lima', 'carlos.lima@email.com', '21987654322'),
+('Beatriz Santos', 'beatriz.santos@email.com', '31987654323'),
+('João Pereira', 'joao.pereira@email.com', '41987654324'),
+('Mariana Oliveira', 'mariana.oliveira@email.com', '51987654325');
 
--- add os modelos de acessórios que ira encontrar no banco
-/*
-INSERT INTO Modelo_aparelho (nome_modelo, marca) VALUES ('iPhone 11', 'Apple');
-INSERT INTO Modelo_aparelho (nome_modelo, marca) VALUES ('iPhone 12', 'Apple');
-INSERT INTO Modelo_aparelho (nome_modelo, marca) VALUES ('iPhone 13', 'Apple');
-INSERT INTO Modelo_aparelho (nome_modelo, marca) VALUES ('Galaxy S20', 'Samsung');
-INSERT INTO Modelo_aparelho (nome_modelo, marca) VALUES ('Galaxy S21', 'Samsung');
-INSERT INTO Modelo_aparelho (nome_modelo, marca) VALUES ('Galaxy A52', 'Samsung');
 
--- add os produtos na base
+INSERT INTO Produto (produto_id, nome, tipo_produto, preco, estoque) VALUES 
+(1, 'Capa Protetora', 'Acessório', 29.99, 50),
+(2, 'Película de Vidro', 'Acessório', 19.99, 100),
+(3, 'Carregador Rápido', 'Carregador', 39.99, 30),
+(4, 'Fone de Ouvido Bluetooth', 'Acessório', 89.99, 20),
+(5, 'Bateria Externa', 'Acessório', 99.99, 15);
 
-INSERT INTO Produto (nome, tipo_produto, preco, estoque) VALUES ('Capa de Silicone', 'Acessório', 29.90, 100);
-INSERT INTO Produto (nome, tipo_produto, preco, estoque) VALUES ('Película de Vidro', 'Acessório', 39.90, 50);
-INSERT INTO Produto (nome, tipo_produto, preco, estoque) VALUES ('Carregador Rápido', 'Carregador', 89.90, 30);
-INSERT INTO Produto (nome, tipo_produto, preco, estoque) VALUES ('Fones de Ouvido Bluetooth', 'Acessório', 199.90, 25);
-INSERT INTO Produto (nome, tipo_produto, preco, estoque) VALUES ('Power Bank', 'Carregador', 149.90, 15);
 
--- add as expecificação do produto (facilitar a leitura com menos colunas)
+INSERT INTO Especificacao_Produto (produto_id, material, potencia) VALUES 
+(1, 'Silicone', 'N/A'),
+(2, 'Vidro Temperado', 'N/A'),
+(3, '5V/2A', 'Rápido'),
+(4, 'Plástico ABS', 'Bluetooth'),
+(5, 'Polímero', '10000mAh');
 
-INSERT INTO Especificacao_Produto (produto_id, material, potencia) VALUES (1, 'Silicone', 'N/A');
-INSERT INTO Especificacao_Produto (produto_id, material, potencia) VALUES (2, 'Vidro Temperado', 'N/A');
-INSERT INTO Especificacao_Produto (produto_id, material, potencia) VALUES (3, 'Plástico', '18W');
-INSERT INTO Especificacao_Produto (produto_id, material, potencia) VALUES (4, 'Plástico', 'N/A');
-INSERT INTO Especificacao_Produto (produto_id, material, potencia) VALUES (5, 'Alumínio', 'N/A');
 
--- add os dados de venda para poder fazes as pesquisas
+INSERT INTO Produto_Modelo (produto_modelo_id, produto_id, modelo_id, compatibilidade) VALUES 
+(1, 1, 1, 'Compatível com iPhone 12'),
+(2, 2, 1, 'Compatível com Samsung Galaxy S21'),
+(3, 3, 2, 'Compatível com a maioria dos dispositivos USB-C'),
+(4, 4, 3, 'Compatível com dispositivos Bluetooth'),
+(5, 5, 4, 'Compatível com smartphones e tablets');
 
-INSERT INTO Venda (data_venda, cliente_id) VALUES ('2024-10-01', 1);
-INSERT INTO Venda (data_venda, cliente_id) VALUES ('2024-10-02', 2);
-INSERT INTO Venda (data_venda, cliente_id) VALUES ('2024-10-03', 3);
 
--- add os itens da venda
+INSERT INTO Venda (venda_id, data_venda, cliente_id) VALUES 
+(1, '2024-11-01', 1),
+(2, '2024-11-02', 2),
+(3, '2024-11-03', 3),
+(4, '2024-11-04', 4),
+(5, '2024-11-05', 5);
 
-INSERT INTO Item_venda (venda_id, produto_id, quantidade, preco_unitario) VALUES (1, 1, 2, 29.90);
-INSERT INTO Item_venda (venda_id, produto_id, quantidade, preco_unitario) VALUES (1, 3, 1, 89.90);
-INSERT INTO Item_venda (venda_id, produto_id, quantidade, preco_unitario) VALUES (2, 2, 1, 39.90);
-INSERT INTO Item_venda (venda_id, produto_id, quantidade, preco_unitario) VALUES (2, 4, 1, 199.90);
-INSERT INTO Item_venda (venda_id, produto_id, quantidade, preco_unitario) VALUES (3, 5, 1, 149.90);
-*/
+
+INSERT INTO Item_Venda (item_venda_id, venda_id, produto_id, quantidade, preco_unitario) VALUES 
+(1, 1, 1, 2, 29.99),
+(2, 1, 2, 1, 19.99),
+(3, 2, 3, 1, 39.99),
+(4, 3, 4, 1, 89.99),
+(5, 4, 5, 1, 99.99);
+
