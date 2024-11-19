@@ -9,7 +9,6 @@ def total_venda(lista_produtos):
 def produto_mais_vendido():
     
 
-sair = True
 while sair:
 
     produto ={}
