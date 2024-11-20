@@ -6,9 +6,15 @@ def total_venda(lista_produtos):
     return resultado
 
 
-def produto_mais_vendido():
-    
+def produto_mais_vendido(lista_produtos):
+    produto_mais_vendido = (lista_produtos[0])
+            
 
+
+    produto_mais_vendido =   max(produto, key=lambda x: x["produto_mais_vendido"])
+    return produto_mais_vendido
+    
+sair = True
 while sair:
 
     produto ={}
@@ -41,8 +47,13 @@ while sair:
             if produto_procurado == produto["nome"]:
                 total_vendido_do_produto = total_venda(produto)
         print(total_vendido_do_produto)
-                
-    if opsion == 5:
-        sair = False
 
-print("O programa terminou!")
+    if opsion == 3:
+        produto_mais_vendido()
+        
+
+                    
+    if opsion == 5:
+        sair == False
+
+#print("O programa terminou!")
