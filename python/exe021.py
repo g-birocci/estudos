@@ -1,43 +1,73 @@
-alunos = {}
 lista = []
 
 while True:
+    print("\nVocê está no menu, escolha uma opção abaixo:")
+    print("1 -- Adicionar um contato")
+    print("2 -- Remover um contato")
+    print("3 -- Visualizar um contato")
+    print("4 -- Buscar contato por tag (conhece de onde ou apelido)")
+    print("5 -- Sair")
 
-    print("1 -- Cadastrar aluno. ")
-    print("2 -- Exibir dados de um aluno. ")
-    print("3 -- Atualizar dados de um aluno. ")
-    print("4 -- Remover um aluno. ")
-    print("5 -- Exibir todos os alunos. ")
-    print("6 -- Calcular aluno com a maior media de notas")
-    print("7 -- Sair. ")
+    opcao = input("Escolha uma opção: ")
 
-    opsion = (input("Digite a opcão desejada: ")).lower()
+    if opcao == "1":
+        nome = input("Qual é o nome do contato? ")
+        telefone = input("Qual é o telefone do contato? ")
+        email = input("Qual é o email do contato? ")
+        tag1 = input("Você o conhece de onde? ")
+        tag2 = input("Qual é o apelido? ")
 
-    if opsion == 1:
-        nome = input("Digite o nome do aluno; ")
-        cidade = input("Cidade do aluno: ")
-        idade = int(input("Digite a idade do aluno: "))
-        print("Digite a nota do aluno: ")
-        mat = float(input("Nota matematica: "))
-        por = float(input("Nota Portugues: "))
-        cie = float(input("Nota ciencias: "))
-
-        media_aluno = (mat + por +cie) / 3
-
-        alunos[nome] = {
-            "cidade": cidade,
-            "idade": idade,
-            "notas": {
-                "matematica": mat,
-                "portugues": por,
-                "ciencias": cie,
-                "media": media_aluno
-            }
+        contatos = {
+            "nome": nome,
+            "telefone": telefone,
+            "email": email,
+            "tags": {tag1, tag2}
         }
-        print(f"Aluno {} cadastrado com sucesso!".format(nome))
-   
-    #elif opsion == 2:
-        input('Digite o nome do aluno: ')
+        lista.append(contatos)
+        print(f"Contato de {nome} adicionado com sucesso!")
 
-    #elif opsion == 3:
-    #elif opsion == 4:
+    elif opcao == "2":
+        nome = input("Digite o nome do contato que quer remover: ")
+        encontrado = False
+        for dicio in lista:
+            if nome == dicio["nome"]:
+                lista.remove(dicio)
+                print(f"O contato {nome} foi removido com sucesso!")
+                encontrado = True
+                break
+        if not encontrado:
+            print(f"O contato {nome} não foi encontrado.")
+
+    elif opcao == "3":
+        nome = input("Qual é o nome do contato que deseja visualizar? ")
+        encontrado = False
+        for dicio in lista:
+            if nome == dicio["nome"]:
+                print(f"\nNome: {dicio['nome']}")
+                print(f"Telefone: {dicio['telefone']}")
+                print(f"Email: {dicio['email']}")
+                print(f"Tags: {', '.join(dicio['tags'])}")
+                encontrado = True
+                break
+        if not encontrado:
+            print(f"O contato {nome} não foi encontrado.")
+
+    elif opcao == "4":
+        tag_procurada = input("Digite a tag para buscar contatos: ")
+        encontrados = False
+        for contato in lista:
+            if tag_procurada in contato["tags"]:
+                print(f"\nNome: {contato['nome']}")
+                print(f"Telefone: {contato['telefone']}")
+                print(f"Email: {contato['email']}")
+                print(f"Tags: {', '.join(contato['tags'])}")
+                encontrados = True
+        if not encontrados:
+            print("Nenhum contato encontrado com essa tag.")
+
+    elif opcao == "5":
+        print("Saindo do programa!")
+        break
+
+    else:
+        print("Opção inválida, tente novamente!")
