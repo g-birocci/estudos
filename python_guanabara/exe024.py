@@ -1,10 +1,13 @@
 import random
+
 num1 = input("Digite o nome do primeiro aluno: ")
 num2 = input("Digite o nome do segundo aluno:")
 num3 = input("Digite o nome do terceiro aluno: ")
 num4 = input("Digite o nome do quarto aluno: ")
 
-aluno_sorteado = random.randint(num1, num2, num3, num4)
+lista = [num1, num2, num3, num4]
+
+aluno_sorteado = random.choice(lista)
 
 print(aluno_sorteado)
 
