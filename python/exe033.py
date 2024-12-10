@@ -1,6 +1,13 @@
-import csv
-
+import re
 reserva ={} 
+
+def check_string_vazio(check_string):
+    # Enquanto a string não corresponder ao padrão, repete o pedido
+    while not re.match(r"^[a-zA-Z]+$", check_string):
+        check_string = input("Só é aceito letras. Digite novamente: ")
+    return check_string
+
+
 
 def add_reserva():
 
@@ -39,20 +46,20 @@ while sair:
     print("3--LISTAR TODAS RESERVAS: ")
     print("4--sAIR")
 
-    op = int(input("Digite a opção desejada: "))
+    op = str(input("Digite a opção desejada: "))
 
     match op:
 
-        case 1:
+        case '1':
             add_reserva()
         
-        case 2:
+        case '2':
             consultar_reserva()
 
-        case 3:
+        case '3':
             listar_reservas()
         
-        case 4:
+        case '4':
             sair = False
 
         case _: 
