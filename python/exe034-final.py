@@ -1,7 +1,8 @@
 import re
-import random
+from random import randint
 dicionario = {}
 saldo = []
+
 
 def depositar_fundo():
     dinheiro = float(input("Digite a quantia que deseja depositar: "))
@@ -25,6 +26,7 @@ def escolher_cavalo():
         
             case "1":
                 cavalo_escolhido = 1
+                
                 break     
             case "2":
                 cavalo_escolhido = 2
@@ -46,8 +48,12 @@ def atualizar_saldo():
     print("Em manutenção")
 
 def simular_corrida():
-    cavalos = ["1","2","3","4"]
-    return random.choice(cavalos)
+    cavalos = randint(1, 4)
+
+    if  == cavalos:
+        print("Vc ganhou!")
+    print(cavalos)
+    
     
 
 

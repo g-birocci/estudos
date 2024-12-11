@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .button.delete {
+            background-color: #dc3545;
+        }
+
+        .button.delete:hover {
+            background-color: #a71d2a;
+        }
+
+        .button.update {
+            background-color: #ffc107;
+            color: #000;
+        }
+
+        .button.update:hover {
+            background-color: #e0a800;
+        }
+
+        .button.insert {
+            background-color: #28a745;
+        }
+
+        .button.insert:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento de Dados</h1>
+        <button class="button insert" onclick="inserir()">Inserir</button>
+        <button class="button update" onclick="alterar()">Alterar</button>
+        <button class="button delete" onclick="deletar()">Deletar</button>
+        <button class="button" onclick="atualizar()">Atualizar</button>
+    </div>
+
+    <script>
+        function inserir() {
+            alert("Função Inserir acionada!");
+            // Adicione a lógica para inserir dados aqui
+        }
+
+        function alterar() {
+            alert("Função Alterar acionada!");
+            // Adicione a lógica para alterar dados aqui
+        }
+
+        function deletar() {
+            alert("Função Deletar acionada!");
+            // Adicione a lógica para deletar dados aqui
+        }
+
+        function atualizar() {
+            alert("Função Atualizar acionada!");
+            // Adicione a lógica para atualizar dados aqui
+        }
+    </script>
+</body>
+</html>
