@@ -99,8 +99,8 @@ while sair:
 
     match op:
         case "1":
-            nome = input("Digite o nome do aluno: ")
-            curso = input("Digite o nome da formação: ")
+            nome = input("Digite o nome do aluno: ").title()
+            curso = input("Digite o nome da formação: ").title()
             email = input("Digite o email do aluno: ")
             inserir_aluno(nome, curso, email)
 
