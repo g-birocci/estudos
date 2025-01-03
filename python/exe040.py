@@ -11,3 +11,4 @@ if preco >= 100:
     print(f"O valor com desconto vai ficar por {valor}")
 else:
     print(f"O valor do produto é {preco}")
+    
