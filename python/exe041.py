@@ -20,8 +20,6 @@ def validar_registo(usuario):
 
     return "Registro falhou: " + ", ".join(motivos)
 
-# Testes
-print(validar_registo(utilizador_1))
 # ... outros testes ...
 check = input("Digite o seu nome de usuario: ")
 checK = validar_registo(check)

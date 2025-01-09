@@ -1,8 +1,8 @@
 print("Bem-vindo")
 menor = 0
 maior = 0
-for i in range(0, 5):
-    peso = float(input("Digite o seu peso: "))
+for i in range(1, 6):
+    peso = float(input(f"Digite o peso da {i}ª pessoa: "))
     if i == 1:
         maior = peso
         menor = peso
