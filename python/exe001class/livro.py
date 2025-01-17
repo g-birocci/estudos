@@ -4,6 +4,5 @@ class Livro():
         self.autor = autor
         self.ano = ano
 
-    def mostra_livro(nome_livro):
-        print("Ola")
-
+    def __str__(self):
+        return f"Título: {self.titulo}, Autor: {self.autor}, Ano: {self.ano}"
