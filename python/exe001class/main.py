@@ -20,7 +20,7 @@ while True:
     op = input("Digite a opção desejada: ").strip()
 
     match op:
-        case "1":  # Adicionar livro
+        case "1": 
             sair = False
             while not sair:
                 nome = input("Digite o nome do livro: ").strip().upper()
@@ -48,7 +48,7 @@ while True:
                 except ValueError:
                     print("Erro: O ano deve ser um número válido. Tente novamente.")
 
-            # Criação do objeto livro
+            
             obj_livro = Livro(nome, autor, ano)
             livro_ok = obj_biblioteca.adicionar_livro(obj_livro)
             
@@ -57,10 +57,10 @@ while True:
             else:
                 print("Livro não adicionado à biblioteca.")
 
-        case "2":  # Remover livro
+        case "2":
             sair = True
             while sair:
-                titulo = input("Digite o título do livro para remover: ").strip() 
+                titulo = input("Digite o título do livro para remover: ").strip().upper()
                 removido = obj_biblioteca.remover_livro(titulo)
 
                 if removido:
@@ -70,7 +70,7 @@ while True:
                     print(f"Erro: O livro '{titulo}' não foi encontrado.")
                     sair = False
 
-        case "3":  # Buscar livro
+        case "3":
             titulo = input("Digite o título do livro que deseja buscar: ").strip().upper()
             livro_encontrado = obj_biblioteca.buscar_livro(titulo)
 
@@ -79,7 +79,7 @@ while True:
             else:
                 print(f"Erro: O livro '{titulo}' não foi encontrado.")
 
-        case "4":  # Exibir livros
+        case "4": 
             if obj_biblioteca.lista_dos_livros:
                 print("\nLista de livros disponíveis:")
                 for livro in obj_biblioteca.lista_dos_livros:
