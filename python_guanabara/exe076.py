@@ -1,8 +1,6 @@
 sair = True
-contador = 0
-soma = 0 
-maior = None
-menor = None
+contador = soma = 0
+maior = menor = None
 while sair:
     num = int(input("Digite um numero: "))
     soma += num
@@ -17,7 +15,7 @@ while sair:
         if num < menor:
             menor = num
             
-    stop = str(input("VC quer continuar [S/N] ? ")).upper()
+    stop = str(input("VC quer continuar [S/N] ? ")).upper().strip()
     if stop == "S":
         sair = True
     else:

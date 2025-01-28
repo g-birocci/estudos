@@ -25,9 +25,11 @@ while sair:
 
             case "3":
                 if n1 > n2:
-                    print(f"O {n1} é maior.")
+                    print(f"O numero {n1} é o maior.")
+                elif n1 < n2:
+                    print(f"O numero {n2} é o maior.")
                 else:
-                    print(f"O {n2} é maior.")
+                    print(f"Os numeros {n1} e {n2} são igiais.")
 
             case "4":
                 voltar = False   

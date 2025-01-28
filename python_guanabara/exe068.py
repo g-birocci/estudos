@@ -1,6 +1,6 @@
 sair = True
 while sair:
-    sexo = str(input("Digite o seu sexo: ")).upper()
+    sexo = str(input("Digite o seu sexo: ")).strip().upper()
     if sexo == "M":
         print("Sexo aceito")
         break

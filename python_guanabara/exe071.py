@@ -3,7 +3,7 @@ contador = 1
 fatorial = 1
 
 while contador <= n1:
-    fatorial = fatorial * contador
+    fatorial *= contador
     contador += 1
 
 print(f"O vatorial de {n1} é {fatorial}")

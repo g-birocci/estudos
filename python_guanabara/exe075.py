@@ -9,5 +9,3 @@ while sair:
     else:
         print(f"A soma de todos os valores inseridos foi {soma}.")
         sair = False
-
-
