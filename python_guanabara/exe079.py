@@ -1,8 +1,8 @@
-import random
+from random import randint
 while True:
     n = int(input("Digite um numero: "))
     op = str(input("PAR ou ÌMPAR? [P/I] ")).upper().strip()
-    desktop = random.randint(1, 10)
+    desktop = randint(1, 10)
     print(f"O Computador escolheu {desktop} e vc {n}")
 
     soma = n + desktop

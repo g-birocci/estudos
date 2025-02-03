@@ -2,5 +2,9 @@
     "files.associations": {
         "stdio.h": "c",
         "random": "cpp"
-    }
+    },
+    "python.autoComplete.extraPaths": [
+        "./"
+    ],
+    "python.pythonPath": "<path_to_your_python_interpreter>"
 }

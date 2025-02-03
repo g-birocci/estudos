@@ -1,7 +1,7 @@
 while True:
-    print("-"*30)
+    print("-" * 25)
     n = int(input("Digite a o numero da tabuada que vc deseja: "))
-    print("-"*30)
+    print("-" * 25)
     if n < 1:
         print("Programa encessado.")
         break

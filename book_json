@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Harry Potter",
+        "author": "Bla - Bla",
+        "year": 1997,
+        "genres": [
+            "Dystopian",
+            "Political Fiction"
+        ]
+    },
+    {
+        "title": "Harry Potter",
+        "author": "Bla - Bla",
+        "year": 1997,
+        "genres": [
+            "Dystopian",
+            "Political Fiction"
+        ]
+    },
+    {
+        "title": "Harry Potter",
+        "author": "Bla - Bla",
+        "year": 1997,
+        "genres": [
+            "Dystopian",
+            "Political Fiction"
+        ]
+    }
+]
