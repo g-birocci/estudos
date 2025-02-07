@@ -1,6 +1,6 @@
 import uuid
 class Parceiro:
-    def __init__(self, nome_empresa: str, contacto: str, email: str, especialidades: list, projetos_em_construcao: list):
+    def __init__(self, nome_empresa: str, contacto: str, email: str, especialidades: list, projetos_em_construcao: list, id=None):
        
         self.id = id if id else str(uuid.uuid4())
         self.nome_empresa = nome_empresa

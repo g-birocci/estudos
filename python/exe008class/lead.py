@@ -1,7 +1,7 @@
 import uuid #Gera numero de id aleatorio e verefica pra não repetir
 class Lead:
 
-    def __init__(self, cliente_id, especialidade, parceiros, descricao, estado):
+    def __init__(self, cliente_id , especialidade, parceiros, descricao, estado):
         self.id = str(uuid.uuid4())
         self.cliente_id = cliente_id
         self.especialidade = especialidade
