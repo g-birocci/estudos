@@ -1,5 +1,43 @@
 {
-    "clientes": [],
-    "leads": [],
-    "parceiros": []
+    "clientes": [
+        {
+            "id": "ba70c7",
+            "nome": "Gabriel Freire",
+            "telefone": "24352525",
+            "email": "gabriel@gmail.com",
+            "morada": "ewrtr"
+        },
+        {
+            "id": "105e6f",
+            "nome": "Gabriel",
+            "telefone": "444555333",
+            "email": "gabriel@gmail.com",
+            "morada": "Rua de camoes"
+        }
+    ],
+    "leads": [
+        {
+            "id": "f7230f3e-3f98-4ba5-9ed9-9ef5b6de344a",
+            "cliente_id": "ba70c7",
+            "especialidade": "Programador",
+            "parceiros": [
+                "jo\u00e3o",
+                "silva"
+            ],
+            "descricao": "TI",
+            "estado": "S\u00e3o Paulo"
+        }
+    ],
+    "parceiros": [
+        {
+            "id": "1d6b6fc2-3307-4c63-9a93-2b9d8a6c9cff",
+            "nome_empresa": "Birocci_tech",
+            "contacto": [
+                "555666777"
+            ],
+            "email": "birocci@tech.com",
+            "especialidades": "Suporte, assistencia",
+            "projetos_em_construcao": "Loja 1, Loja 2"
+        }
+    ]
 }
