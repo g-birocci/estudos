@@ -30,8 +30,6 @@ while True:
     else:
         print("Opção inválida. Tente novamente")
 
-    
-
     aluno = Aluno(aluno_nome, aluno_email)
     aluno.add_aluno(aluno)
 
@@ -40,9 +38,3 @@ while True:
     continuar = input("Deseja adicionar outro aluno? (s/n): ").lower()
     if continuar != 's':
         break
-
-
-
-
-
-

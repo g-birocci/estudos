@@ -1,17 +1,21 @@
 from usuario import Usuario
 
 class Aluno(Usuario):
-    def __init__(self, nome, email, curso = None):
+    def __init__(self, nome, email, curso_inscrito = None):
         super().__init__(nome, email)
-        self.curso = curso if curso is not None else []
+        self.curso_inscrito = curso_inscrito if curso_inscrito is not None else []
     
 
     def exibir_info(self):
-        super().exibir_info()
-        print("Curso: ", self.curso)
+        pai_info = super().exibir_info()
+        curso = ', '.join(self.curso_inscrito) if self.curso_inscrito is not None else []
+        return f"{pai_info}\nCursos Inscritos: {curso}"
         
-    def add_aluno(self, aluno):
-        self.curso.append(aluno)
-        print(f"Aluno {aluno} adicionado ao curso com sucesso!")
-
+    def to_dict(self):
+        data = super().to_dict()
+        data.update({
+            'tipo': 'aluno',
+            'cursos_inscritos': self.curso_inscrito
+        })
+        return data
           

@@ -1,3 +1,4 @@
+import json
 class Usuario:
 
     def __init__(self, nome, email):
@@ -5,8 +6,14 @@ class Usuario:
         self.email = email
 
     def exibir_info(self):
-        print("Nome: ", self.nome)
-        print("Email: ", self.email)
+        return f"Nome: {self.nome}\nEmail: {self.email}"
+    
+    def to_dict(self):
+        return {
+            'nome': self.nome,
+            'email': self.email
+        }
 
+    
         
 
