@@ -8,5 +8,10 @@ while True:
     n = int(input("Digite um nemero entre 0 e 20: "))
     if n >= 0 and n <= 20: 
         print(f"O numero digitado foi {numeros[n]}")
-        break
+        
+        continuar = str(input("Voce quer continuar [S/N] ?")).strip().upper()
+
+        if continuar == "N":
+            print("Saindo do sistema... bye!")
+            break
 

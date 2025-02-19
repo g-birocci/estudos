@@ -1,40 +1,83 @@
-from usuario import Usuario
 from aluno import Aluno
+from instrutor import Instrutor
+from base_sistema import Base
+base = Base()
 
-cursos_disponiveis = {
-    1: "TI",
-    2: "Programador",
-    3: "Web Developer",
-    4: "Front End",
-    5: "Back End",
-}
+try:
+    base.carregar_usuarios('usuarios.json')
+    print("Dados carregados com sucesso!")
+except FileNotFoundError:
+    print("Nenhum dados anterior encontrado. Iniciando com uma lista vazia.")
 
-alunos = []
 
 while True:
+    print('''
+        1 -- Adicionar aluno
+        2 -- Adicionar instrutor
+        3 -- Listar alunos
+        4 -- Listar instrutores
+        5 -- Sair
+    ''')
 
-    aluno_nome = str(input("Digite o nome do aluno: "))
-    aluno_email = str(input("Digite o email do aluno: "))
-    
-    print("""Escolha o curso do aluno:
-          1 -- TI
-          2 -- Programador
-          3 -- Web developer
-          4 -- Front end
-          5 -- Back end """)
-    
-    op = int(input(("Digite o numero da opção desejada: ")))
+    opc = input("Escolha a opção desejada: ")
 
-    if op in cursos_disponiveis:
-        cursos_disponiveis = cursos_disponiveis[op]
-    else:
-        print("Opção inválida. Tente novamente")
+    match opc:
+        case "1":
+            aluno_nome = input("Digite o nome do aluno: ")
+            aluno_email = input("Digite o email do aluno: ")
 
-    aluno = Aluno(aluno_nome, aluno_email)
-    aluno.add_aluno(aluno)
+            print("""Escolha o curso do aluno:
+                1 -- TI
+                2 -- Programador
+                3 -- Web Developer
+                4 -- Front End
+                5 -- Back End""")
 
-    alunos.append(aluno)
+            op = int(input("Digite o número da opção desejada: "))
 
-    continuar = input("Deseja adicionar outro aluno? (s/n): ").lower()
-    if continuar != 's':
-        break
+            if op in base.cursos_disponiveis:
+                curso = base.cursos_disponiveis[op]
+            else:
+                print("Opção inválida. Tente novamente.")
+                continue
+
+            aluno = Aluno(aluno_nome, aluno_email, [curso])
+            base.add_aluno(aluno)
+            base.salvar_usuarios('usuarios.json')
+            print("Aluno adicionado com sucesso!")
+
+        case "2":
+            instrutor_nome = input("Digite o nome do instrutor: ")
+            instrutor_email = input("Digite o email do instrutor: ")
+
+            print("""Escolha o curso ministrado pelo instrutor:
+                1 -- TI
+                2 -- Programador
+                3 -- Web Developer
+                4 -- Front End
+                5 -- Back End""")
+
+            op = int(input("Digite o número da opção desejada: "))
+
+            if op in base.cursos_disponiveis:
+                curso = base.cursos_disponiveis[op]
+            else:
+                print("Opção inválida. Tente novamente.")
+                continue
+
+            instrutor = Instrutor(instrutor_nome, instrutor_email, [curso])
+            base.add_instrutor(instrutor)
+            base.salvar_usuarios('usuarios.json')
+            print("Instrutor adicionado com sucesso!")
+
+        case "3":
+            base.listar_alunos()
+
+        case "4":
+            base.listar_instrutores()
+
+        case "5":
+            break
+
+        case _:
+            print("Opção inválida.")

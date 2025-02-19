@@ -5,7 +5,6 @@ class Aluno(Usuario):
         super().__init__(nome, email)
         self.curso_inscrito = curso_inscrito if curso_inscrito is not None else []
     
-
     def exibir_info(self):
         pai_info = super().exibir_info()
         curso = ', '.join(self.curso_inscrito) if self.curso_inscrito is not None else []

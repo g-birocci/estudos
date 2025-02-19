@@ -13,7 +13,3 @@ class Usuario:
             'nome': self.nome,
             'email': self.email
         }
-
-    
-        
-
