@@ -65,7 +65,6 @@ void limparBuffer() {
     while ((c = getchar()) != '\n' && c != EOF);
 }
 
-// Função principal
 int main() {
     setlocale(LC_ALL, "Portuguese");
 
