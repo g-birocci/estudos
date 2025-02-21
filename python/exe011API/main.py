@@ -1,7 +1,8 @@
 import requests
+import json
+#from filme import Film
 
-url = "https://api.themoviedb.org/3/authentication"
-url = "https://api.themoviedb.org/3/tv/series_id/season/season_number/episode/episode_number/images"
+url = "https://api.themoviedb.org/3/movie/top_rated"
 
 headers = {
     "accept": "application/json",
@@ -10,6 +11,10 @@ headers = {
 
 response = requests.get(url, headers=headers)
 
-print(response.text)
+info = response.json()
 
+with open("film.json", "w", encoding="utf-8") as arquivo:
+    json.dump(info, arquivo, indent=4, ensure_ascii=False)
+
+print("Dados salvo com sucesso!")
 

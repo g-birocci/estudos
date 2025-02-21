@@ -1,0 +1,2 @@
+Olá, Gabriel!
+Aprendendo ficheiros em C.
