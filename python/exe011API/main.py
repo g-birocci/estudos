@@ -17,4 +17,3 @@ with open("film.json", "w", encoding="utf-8") as arquivo:
     json.dump(info, arquivo, indent=4, ensure_ascii=False)
 
 print("Dados salvo com sucesso!")
-
