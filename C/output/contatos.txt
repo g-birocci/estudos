@@ -1,5 +1,3 @@
-Gabriel Freire,97834509,0,gabriel@gmail.com
 Gabriel Birocci,34424523,4,gab@gmail.com
 ester,32657756,876,ester@gmail.com
 camila ,35465445,5,345533444
-alex,34566778,8,fewfew@gmail.com
