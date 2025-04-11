@@ -1,0 +1,15 @@
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\bin\Debug\net8.0\aula_01.exe
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\bin\Debug\net8.0\aula_01.deps.json
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\bin\Debug\net8.0\aula_01.runtimeconfig.json
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\bin\Debug\net8.0\aula_01.dll
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\bin\Debug\net8.0\aula_01.pdb
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\obj\Debug\net8.0\aula_01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\obj\Debug\net8.0\aula_01.AssemblyInfoInputs.cache
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\obj\Debug\net8.0\aula_01.AssemblyInfo.vb
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\obj\Debug\net8.0\aula_01.vbproj.CoreCompileInputs.cache
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\obj\Debug\net8.0\aula_01.sourcelink.json
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\obj\Debug\net8.0\aula_01.dll
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\obj\Debug\net8.0\refint\aula_01.dll
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\obj\Debug\net8.0\aula_01.pdb
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\obj\Debug\net8.0\aula_01.genruntimeconfig.cache
+C:\Users\gabri\Documents\estudos\visual basic\aula_01\obj\Debug\net8.0\ref\aula_01.dll
