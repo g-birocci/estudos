@@ -21,14 +21,47 @@
 <body>
     <h1>Somando Valores</h1>
     <input type="number" name="txtn1" id="txtn1"> +
-    <input type="number" name="txtn1" id="txtn2">
+    <input type="number" name="txtn1" id="txtn2"> <br>
     <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value="subitrair" onclick="subitrair()">
+    <input type="button" value="Multiplicar" onclick="multiplicacao()">
+    <input type="button" value="Dividir" onclick="dividir()">
     <div id="res">Resultado: </div>
 
 
     <script>
 
         function somar() {
+            var txtn1 = window.document.getElementById('txtn1')
+            var txtn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(txtn1.value)
+            var n2 = Number(txtn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a £${s}`
+            }
+
+            function subitrair() {
+            var txtn1 = window.document.getElementById('txtn1')
+            var txtn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(txtn1.value)
+            var n2 = Number(txtn2.value)
+            var s = n1 - n2
+            res.innerHTML = `A subitração entre ${n1} e ${n2} é igual a £${s}`
+            }
+
+            function multiplicacao() {
+            var txtn1 = window.document.getElementById('txtn1')
+            var txtn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(txtn1.value)
+            var n2 = Number(txtn2.value)
+            var s = n1 * n2
+            res.innerHTML = `O valor de ${n1} X ${n2} é igual a £${s}`
+            }
+
+            function dividir() {
             var txtn1 = window.document.getElementById('txtn1')
             var txtn2 = window.document.getElementById('txtn2')
             var res = window.document.getElementById('res')

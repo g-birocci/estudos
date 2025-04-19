@@ -1,0 +1,12 @@
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\bin\Debug\aula_02.exe.config
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\bin\Debug\aula_02.exe
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\bin\Debug\aula_02.pdb
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\bin\Debug\aula_02.xml
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\obj\Debug\aula_02.vbproj.AssemblyReference.cache
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\obj\Debug\aula_02.Form1.resources
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\obj\Debug\aula_02.Resources.resources
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\obj\Debug\aula_02.vbproj.GenerateResource.cache
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\obj\Debug\aula_02.vbproj.CoreCompileInputs.cache
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\obj\Debug\aula_02.exe
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\obj\Debug\aula_02.xml
+C:\Users\gabri\Documents\estudos\visual basic\aula_02\obj\Debug\aula_02.pdb
