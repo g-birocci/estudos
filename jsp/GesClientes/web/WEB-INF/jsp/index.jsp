@@ -12,7 +12,7 @@
         <h1>Gestão de Clientes</h1>
         
         <a target="_self" href="listar.jsp">Listar</a><br>
-        <a target="_self" href="inserir.jsp">Inserir</a><br>
+        <a target="_self" href="insere.html">Inserir</a><br>
         <a target="_self" href="eliminar.jsp">Eliminar</a><br>
         <a target="_self" href="alterar1.jsp">Alterar</a><br>
     </body>
