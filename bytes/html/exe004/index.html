@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form action="URL" method="post">
+
+        <fieldset>
+            <legend>Informação basica</legend>
+
+        <label for="name">Nome</label>
+        <input type="text" id="name" placeholder="Digite seu nome" required>
+
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+
+        <br><br>
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" placeholder="Digite seu Senha" required>
+
+        <br><br>
+
+        <label for="data_nasc">Data de Nascimento</label>
+        <input type="date" name="date" id="data_nasc">
+
+        <br><br>
+
+        <label for="color">Cor Favorita</label>
+        <input type="color" name="color" id="color">
+
+        <br><br>
+
+        <label for="cv">Upload de CV:</label> <br>
+        <input type="file">
+
+        <br><br>
+
+        <label for="estacao">Estação favorita:</label><br>
+
+            <input type="radio" name="estacao" id="primavera" value="Primavera">
+            <label for="primavera">Primavera</label>
+
+            <input type="radio" name="estacao" id="verao" value="Verão">
+            <label for="verao">Verão</label>
+
+            <input type="radio" name="estacao" id="outono" value="Outono">
+            <label for="outono">Outono</label>
+
+            <input type="radio" name="estacao" id="inverno" value="Inverno">
+            <label for="inverno">Inverno</label>
+
+            <br><br>
+
+            <label>Gostos:</label><br>
+
+            <input type="checkbox" name="gosto" id="musica" value="Música">
+            <label for="musica">Música</label>
+
+            <input type="checkbox" name="gosto" id="cinema" value="Cinema">
+            <label for="cinema">Cinema</label>
+
+            <input type="checkbox" name="gosto" id="desporto" value="Desporto">
+            <label for="desporto">Desporto</label>
+
+            <input type="checkbox" name="gosto" id="viagens" value="Viagens">
+            <label for="viagens">Viagens</label>
+
+        <br><br>
+
+        <label for="ling">Linguagem de Programação: </label>
+        <select name="ling" id="ling">
+            <option value="html">HTML</option>
+            <option value="java">JAVA</option>
+            <option value="c">C</option>
+            <option value="cc">C++</option>
+        </select>
+        
+        <br><br>
+          
+        <input type="reset" value="limpar">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
