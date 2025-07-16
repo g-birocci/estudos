@@ -1,0 +1,35 @@
+body {
+    background-image: url(dia-do-cafe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#p1 {
+    width: 100vh;
+    padding: 20px;
+    margin-left: 30px;
+    color: white;
+    border: 2px;
+    border-radius: 10px; 
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+button {
+    background-color: red;
+    margin-top: 20px;
+    border-radius: 5px;
+    height: 40px;
+    width: 90px;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: red;
+
+}
