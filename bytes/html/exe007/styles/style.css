@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(250, 162, 162);
+}
+
+section {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 20px 30px;
+    background-color: blue;
+}
+#pai {
+    display: flex;
+    width: 600px;
+    height: 180px;
+}
+
+#pai img {
+    border-radius: 50%;
+}
+#filho h1 {
+    display: inline-block;
+    padding: 20px;
+}
+
+#filho p {
+    padding: 20px;
+}
+
+button {
+    padding: 2px;
+    margin-left: 20px;
+    color: white;
+    background-color: rgb(184, 184, 255);
+    border-radius: 10px;
+    width: 100px;
+    text-decoration: none;
+}
