@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <label for="name">Nome</label>
+            <input type="text" name="name" id="name" required minlength="3">
+        <label for="apelido">Apelido</label>
+            <input type="text" name="apelido" id="apelido" required>
+        <button type="submit">Enviar</button>
+    </form>
+    
+</body>
+</html>
