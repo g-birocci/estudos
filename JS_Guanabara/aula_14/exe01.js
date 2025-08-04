@@ -7,5 +7,3 @@ if (vel > 60) {
 } else {
     console.log(`Digija sempre com cuidado!`)
 }
-
-

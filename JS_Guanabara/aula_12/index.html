@@ -7,9 +7,11 @@
     <style>
         body {
             font: 18pt arial;
+            background-color: rgb(197, 234, 255);
         }
         input {
             width: 100px;
+            height: 20px;
         }
 
         div#res {
@@ -67,8 +69,8 @@
             var res = window.document.getElementById('res')
             var n1 = Number(txtn1.value)
             var n2 = Number(txtn2.value)
-            var s = n1 + n2
-            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a £${s}`
+            var s = n1 / n2
+            res.innerHTML = `A divisão entre ${n1} e ${n2} é igual a £${s}`
             }
 
     </script>

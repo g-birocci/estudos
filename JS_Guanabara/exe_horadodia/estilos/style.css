@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: rgb(145, 145, 201);
+    text-align: center;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.403);
+}
+
+#img > img {
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    color: wheat;
+    padding: 10px;
+}
