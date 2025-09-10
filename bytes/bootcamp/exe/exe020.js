@@ -1,4 +1,4 @@
-function diferecaDiagonal (matrix) {
+function diferecaDiagonal (matrix)  {
     let firt = 0
     let segund = 0
     
@@ -16,3 +16,4 @@ matrix = [
             [1,8,9]
         ]
 console.log(diferecaDiagonal(matrix))
+

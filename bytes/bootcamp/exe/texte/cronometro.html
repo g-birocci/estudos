@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cronômetro</h1>
+    </header>
+
+    <main>
+        <div id="timer">00:00:00</div>
+        <button onclick="startTimer()">Iniciar</button>
+        <button onclick="resetTimer()">Resetar</button>
+    </main>
+
+    <script>
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+        let timerInterval;
+
+        function updateTimer() {
+            let sec = seconds < 10 ? '0'+seconds : seconds;
+            let min = minutes < 10 ? '0'+minutes : minutes;
+            let hr = hours < 10 ? '0'+hours : hours;
+            document.getElementById('timer').textContent = `${hr}:${min}:${sec}`;
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                seconds++;
+                if(seconds == 60){
+                    seconds = 0;
+                    minutes++;
+                }
+                if(minutes == 60){
+                    minutes = 0;
+                    hours++;
+                }
+                updateTimer();
+            }, 1000);
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            seconds = 0;
+            minutes = 0;
+            hours = 0;
+            updateTimer();
+        }
+
+        updateTimer();
+    </script>
+</body>
+</html>
