@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de DOM</h1>
+    <p id="para">
+        Valor: 1
+    </p>
+    <button onclick="mudartexto()">Incrementar</button>
+    <button onclick="zerar()">Zerar</button>
+
+    <p id="res"></p>
+
+    <script>
+        let valor = 0;
+        function mudartexto() {
+            valor++;
+            document.getElementById('para').innerHTML = "Valor: " + valor
+        }
+        function zerar() {
+            valor = 0;
+            document.getElementById('para').innerHTML = "Valor: " + valor
+        }
+    </script>
+</body>
+</html>

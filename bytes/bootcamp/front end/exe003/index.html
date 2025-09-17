@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gerador de Nomes</h1>
+    <p id="nome"></p>
+    <button onclick="gerarNome()">Gerar Nome</button>
+
+    <script>
+
+        function gerarNome() {
+            const nomes = [
+            "Ana", "Bruno", "Carla", "Daniel", "Eduarda",
+            "Felipe", "Gabriela", "Henrique", "Isabela", "João",
+            "Karina", "Lucas", "Mariana", "Natália", "Otávio",
+            "Paula", "Ricardo", "Sofia", "Tiago", "Vanessa",
+            "Wagner", "Xavier", "Yasmin", "Zé", "Beatriz",
+            "Caio", "Diego", "Fernanda", "Gustavo", "Helena"
+            ];
+
+            const adjetivos = [
+            "Forte", "Rápido", "Calmo", "Alegre", "Tranquilo",
+            "Valente", "Inteligente", "Amigável", "Criativo", "Divertido",
+            "Sábio", "Persistente", "Leal", "Generoso", "Corajoso",
+            "Paciente", "Determinado", "Justo", "Honesto", "Carinhoso",
+            "Elegante", "Gentil", "Simpático", "Sonhador", "Veloz",
+            "Humilde", "Aventureiro", "Charmoso", "Discreto", "Curioso"
+            ];
+
+            const nome = nomes[[Math.floor(Math.random() * nomes.length)]];
+            const adj = adjetivos[[Math.floor(Math.random() * adjetivos.length)]];
+
+            document.getElementById('nome').innerHTML = "O nome gerado foi " + nome + " " + adj
+         }
+    </script>
+
+</body>
+</html>
