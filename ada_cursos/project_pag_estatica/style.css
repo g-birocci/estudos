@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Heebo", sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+header #navbar {
+    display: flex;
+    padding: 0 2rem;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #navbar .nav-brand {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}                                                                        
+header #navbar .nav_list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+header #navbar .nav_list .item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+header #navbar .nav_list .item a:hover {
+    color: #777;
+    transition: color 0.3s;
+}
+
+main {
+    margin-top: 6rem;
+}
+main #banner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+main #banner .banner_content .banner_content_title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+main #banner .banner_content .banner_content_subtitle {
+    font-size: 1rem;
+    max-width: 37rem;
+    line-height: 1.5rem;
+    margin-bottom: 2.2rem;
+}
+
+main #banner .banner_content_btn {
+    background-color: #00A8cc;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+}
+
+main #banner .banner_img {
+    border-radius: 50px;
+    width: 100%;
+    max-width: 300px;
+}
+
